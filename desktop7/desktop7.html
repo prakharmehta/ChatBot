@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="../materialize/css/materialize.css" /> -->
+    <link rel="stylesheet" href="desktop7.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="form__container container">
+      <div class="form">
+          <div class="form__progress">
+              <div class="col s3 offset-s8">
+                  <small>Step 1 of 5</small>
+                  <div class="progress__bar"></div>
+              </div>
+          </div>
+          <div class="form__header">
+              <div class="col s9 form__heading">
+                  <span>States/Transitions</span>
+              </div>
+              <div class="col s3 add__state">
+                <button>Add State</button>
+              </div>
+          </div>
+          <div class="state" id="state1">
+            <div class="state__bar"></div>
+            <div class="state__reveal">
+              <button id="btn-state1">State 1</button>
+              <div class="state__transitions hidden">
+                <div class="transition">
+                  <button  id="transition1">Transition 1</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proceed">
+            <button>Proceed</button>
+          </div>
+      </div>
+    </div>
+    <script src="desktop7.js"></script>
+  </body>
+</html>
