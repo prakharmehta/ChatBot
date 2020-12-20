@@ -9,35 +9,124 @@
   <body>
     <div class="form__container container">
       <div class="form">
-          <div class="form__progress">
-              <div class="col s3 offset-s8">
-                  <small>Step 1 of 5</small>
-                  <div class="progress__bar"></div>
-              </div>
+        <div class="form__progress">
+          <div class="col s3 offset-s8">
+            <small>Step 1 of 5</small>
+            <div class="progress__bar"></div>
           </div>
-          <div class="form__header">
-              <div class="col s9 form__heading">
-                  <span>States/Transitions</span>
-              </div>
-              <div class="col s3 add__state">
-                <button>Add State</button>
-              </div>
+        </div>
+        <div class="form__header">
+          <div class="col s9 form__heading">
+            <span>States/Transitions</span>
           </div>
+          <div class="col s3 add__state">
+            <button>Add State</button>
+          </div>
+        </div>
+        <div class="states">
           <div class="state" id="state1">
             <div class="state__bar"></div>
             <div class="state__reveal">
               <button id="btn-state1">State 1</button>
               <div class="state__transitions hidden">
+                <br />
                 <div class="transition">
-                  <button  id="transition1">Transition 1</button>
+                  <button class="collapsible" id="transition1">
+                    Transition 1
+                  </button>
+                  <div class="transition__form content">
+                    <br />
+                    <div
+                      class="transition__form__container"
+                      id="transition-form-1"
+                    >
+                      <form action="">
+                        <div class="transition__form__left">
+                          <div class="input">
+                            <label for="msg">Message</label><br />
+                            <input
+                              class="input__field"
+                              type="text"
+                              id="msg"
+                              name="message"
+                            />
+                          </div>
+                          <div class="input">
+                            <label for="key">Keywords</label><br />
+                            <input
+                              class="input__field"
+                              type="text"
+                              id="key"
+                              name="keywords"
+                            />
+                          </div>
+                          <div class="input">
+                            <label for="end">End</label><br />
+                            <input
+                              class="input__field"
+                              type="text"
+                              id="end"
+                              name="end"
+                            />
+                          </div>
+                          <div class="input">
+                            <label for="spare">Spare Content</label><br />
+                            <input
+                              class="input__field"
+                              type="text"
+                              id="spare"
+                              name="spare_content"
+                            />
+                          </div>
+                        </div>
+                        <div class="transition__form__right">
+                          <div class="input">
+                            <label for="intent">Intent</label><br />
+                            <input
+                              class="input__field"
+                              type="text"
+                              id="intent"
+                              name="intent"
+                            />
+                          </div>
+                          <div class="input">
+                            <label for="transition_state"
+                              >Transition State</label
+                            ><br />
+                            <input
+                              class="input__field"
+                              type="text"
+                              id="transition_state"
+                              name="transition_state"
+                            />
+                          </div>
+                          <div class="input">
+                            <label for="type">Type</label><br />
+                            <input
+                              class="input__field"
+                              type="text"
+                              id="type"
+                              name="type"
+                            />
+                          </div>
+                          <div class="input">
+                            <label for="">&nbsp;</label><br />
+                            <button>ADD</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="proceed">
-            <button>Proceed</button>
-          </div>
+        </div>
+        <div class="proceed">
+          <button>Proceed</button>
+        </div>
       </div>
+      <img class="robo" src="../img/robo 1.svg" alt="" />
     </div>
     <script src="desktop7.js"></script>
   </body>

@@ -17,23 +17,31 @@ body {
   background: #1c2235;
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-family: "Circular Spotify Tx T Black";
 }
 
 .form__container {
   background: white;
-  width: 1025px;
-  min-height: 689px;
+  width: 1089px;
+  min-height: 753px;
+  height: auto;
+  box-sizing: border-box;
   background: #ffffff;
   border-radius: 14px;
   padding: 64px;
+  /* overflow: hidden; */
+  position: relative;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 1025px;
-  min-height: 689px;
+  width: 100%;
+  min-height: 625px;
+  height: auto;
+  position: relative;
+  /* overflow: hidden; */
 }
 
 .form__progress {
@@ -72,6 +80,7 @@ body {
 .form__header {
   display: flex;
   justify-content: space-between;
+  margin-top: 84px;
 }
 
 .form__heading span {
@@ -98,21 +107,27 @@ body {
   font-size: 16px;
 }
 
+.states {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  margin-bottom: 200px;
+}
+
 .state {
   width: 209px;
   display: flex;
-  justify-content: space-around;
   height: inherit;
   transition: all linear 0.25s;
-
 }
 
 .state__bar {
-  width: 8px;
+  min-width: 8px !important;
   background: #d1d5dd;
   height: inherit;
   border-radius: 3px;
   transition: all linear 0.25s;
+  margin-right: 12px;
 }
 
 .active__state {
@@ -131,23 +146,30 @@ body {
   cursor: pointer;
 }
 
-.transition button{
+.state__transitions {
+  overflow: hidden;
+}
+
+.transition button {
   width: 189px;
   height: 47px;
   background: #d1d5dd;
   border-radius: 6px;
-  color: #1C2235;
+  color: #1c2235;
   cursor: pointer;
 }
 
 .hidden {
-  display: none;
+  height: 0;
 }
 
 .proceed {
   display: flex;
   width: 100%;
   justify-content: flex-end;
+  margin-top: 64px;
+  position: absolute;
+  bottom: 0px;
 }
 
 .proceed button {
@@ -160,4 +182,65 @@ body {
   color: #ffffff;
   border: none;
   cursor: pointer;
+}
+
+.transition__form__container {
+  width: 933px;
+  height: 461px;
+  box-sizing: border-box;
+  background: #d1d5dd;
+  border-radius: 6px;
+  padding: 0px 64px;
+  display: flex;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+form {
+  display: flex;
+  width: 100%;
+}
+
+.transition__form__left, .transition__form__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 95%;
+}
+
+.input__field {
+  width: 361px;
+  height: 47px;
+  background: #ffffff;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.input button {
+  font-family: "Circular Spotify Tx T Black";
+  width: 189px;
+  height: 47px;
+  background: #1c2235;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.robo {
+  position: absolute;
+  right: -90px;
+  bottom: 20px;
+}
+
+input:focus, button:focus {
+  outline: none;
 }

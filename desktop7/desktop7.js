@@ -1,15 +1,27 @@
-const stateBtn = document.getElementById("btn-state1")
-const transitions = document.querySelector("#state1 .state__transitions")
-const stateBar = document.querySelector("#state1 .state__bar")
-stateBtn.addEventListener('click', () => {
-    if(transitions.classList.contains("hidden"))
-    {
-        transitions.classList.remove("hidden")
-        stateBar.classList.add("active__state")
-    }
-    else
-    {
-        transitions.classList.add("hidden")
-        stateBar.classList.remove("active__state")
-    }
-})
+const states = document.querySelectorAll(".state")
+console.log(states);
+states.forEach(state => {
+const stateBtn = state.querySelector(".state__reveal > button")
+const stateBar = state.querySelector(".state__bar")
+    stateBtn.addEventListener('click', () => {
+        const transitions = state.querySelector(".state__transitions")
+        console.log(transitions);
+        state.classList.toggle("active");
+        transitions.classList.toggle("hidden")
+        stateBar.classList.toggle("active__state")
+    })
+});
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = 481 + "px";
+        }
+    });
+}
